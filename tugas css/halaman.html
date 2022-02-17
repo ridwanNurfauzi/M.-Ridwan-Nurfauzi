@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas!!!!!!!!</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <table cellpadding="6">
+      <tr>
+        <th colspan="4" class="sb"><h1>SISTEM BILANGAN</h1></th>
+      </tr>
+      <tr class="bil">
+        <th>Biner</th>
+        <th>Oktal</th>
+        <th>Desimal</th>
+        <th>Heksadesimal</th>
+      </tr>
+      <script>
+        for (i = 0; i <= 20; i++) {
+          document.writeln(
+            '<tr class="hov"><td id="hov">' +
+              i.toString(2) +
+              '</td><td id="hov">' +
+              i.toString(8) +
+              '</td><td id="hov">' +
+              i.toString() +
+              '</td><td class="uppercase" id="hov">' +
+              i.toString(16) +
+              "</td></tr>"
+          );
+        }
+      </script>
+    </table>
+  </body>
+</html>

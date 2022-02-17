@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Calibri;
+        font-size: 18px;
+      }
+      #header {
+        border-bottom: 1px solid black;
+      }
+      #th {
+        background-color: #ddd;
+      }
+      #tr,
+      #table,
+      #th,
+      #td {
+        border: 2px solid #000;
+        border-collapse: collapse;
+      }
+      #center {
+        text-align: center;
+        border: 2px solid #000;
+      }
+
+      #note {
+        border: 2px solid #000;
+        width: 674px;
+      }
+
+      #footer {
+        margin-top: 20px;
+        border-top: 1px solid #000;
+        display: flex;
+        font-size: 12px;
+      }
+      #box {
+        width: 40px;
+        height: 20px;
+        background-color: #ddd;
+        margin-right: 6px;
+      }
+      #number {
+        right: 0px;
+        text-align: right;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <table>
+        <tr>
+          <td>Nama</td>
+          <td><b>:CHAERUL MUTAQIN 1</b></td>
+        </tr>
+        <tr>
+          <td>NIS/NISN</td>
+          <td>:006074/01234569</td>
+        </tr>
+        <tr>
+          <td>Kelas</td>
+          <td>:X-Otomatisasi dan Tata Kelola Perbankan</td>
+        </tr>
+        <tr>
+          <td>Semester/Tahun Pelajaran</td>
+          <td>:Genap/2019-2020</td>
+        </tr>
+      </table>
+    </div>
+    <div id="bagian-utama">
+      <h4
+        style="text-align: center; text-transform: uppercase; font-size: 22px"
+      >
+        Pencapaian Kompetisi Peserta Didik
+      </h4>
+
+      <h5 style="text-transform: uppercase; font-size: 22px">
+        a. nilai akademik
+      </h5>
+      <table id="table" style="margin-bottom: 20px">
+        <tr id="tr">
+          <th id="th">No</th>
+          <th id="th">Mata Pelajaran</th>
+          <th id="th">Pengetahuan</th>
+          <th id="th">Keterampilan</th>
+          <th id="th" style="width: 60px">Nilai Akhir</th>
+          <th id="th">Predikat</th>
+        </tr>
+        <tr id="tr">
+          <th id="td">A</th>
+          <td id="td"><b>Muatan Nasional</b></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+        </tr>
+        <tr id="tr">
+          <td id="center">1</td>
+          <td id="td">Pendidikan Agama dan Budi Pekerti</td>
+          <td id="center">90</td>
+          <td id="center">75</td>
+          <td id="center">85</td>
+          <td id="center">A-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">2</td>
+          <td id="td">Pendidikan Pancasila dan Kewarganegaraan</td>
+          <td id="center">80</td>
+          <td id="center">87</td>
+          <td id="center">84</td>
+          <td id="center">B+</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">3</td>
+          <td id="td">Bahasa Indonesia</td>
+          <td id="center">92</td>
+          <td id="center">87</td>
+          <td id="center">90</td>
+          <td id="center">A</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">4</td>
+          <td id="td">Matematika</td>
+          <td id="center">91</td>
+          <td id="center">85</td>
+          <td id="center">88</td>
+          <td id="center">A-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">5</td>
+          <td id="td">Sejarah Indonesia</td>
+          <td id="center">70</td>
+          <td id="center">64</td>
+          <td id="center">67</td>
+          <td id="center">C</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">6</td>
+          <td id="td">Bahasa Inggris</td>
+          <td id="center">78</td>
+          <td id="center">86</td>
+          <td id="center">82</td>
+          <td id="center">B+</td>
+        </tr>
+        <tr id="tr">
+          <td id="center"><b>B</b></td>
+          <td id="td"><b>Muatan Kewilayahan</b></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+        </tr>
+        <tr id="tr">
+          <td id="center">1</td>
+          <td id="td">Seni Budaya</td>
+          <td id="center">89</td>
+          <td id="center">92</td>
+          <td id="center">91</td>
+          <td id="center">A</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">2</td>
+          <td id="td">Pendidikan Jasmani Olahraga dan Kesehatan</td>
+          <td id="center">77</td>
+          <td id="center">93</td>
+          <td id="center">87</td>
+          <td id="center">A-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">3</td>
+          <td id="td">Muatan Lokal</td>
+          <td id="center">60</td>
+          <td id="center">68</td>
+          <td id="center">65</td>
+          <td id="center">C</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">4</td>
+          <td id="td">Muatan Lokal2</td>
+          <td id="center">90</td>
+          <td id="center">83</td>
+          <td id="center">86</td>
+          <td id="center">A-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">5</td>
+          <td id="td">Muatan Lokal3</td>
+          <td id="center">88</td>
+          <td id="center">91</td>
+          <td id="center">90</td>
+          <td id="center">A</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">6</td>
+          <td id="td">Muatan Lokal4</td>
+          <td id="center">90</td>
+          <td id="center">87</td>
+          <td id="center">88</td>
+          <td id="center">A-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center"><b>C</b></td>
+          <td id="td"><b>Muatan Peminatan Kejuruan</b></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+        </tr>
+        <tr id="tr">
+          <td id="td" colspan="2"><b>C1. Dasar Bidang Keahlian</b></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+        </tr>
+        <tr id="tr">
+          <td id="center">1</td>
+          <td id="td">Simulasi dan Komunikasi Digital</td>
+          <td id="center">82</td>
+          <td id="center">88</td>
+          <td id="center">85</td>
+          <td id="center">A-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">2</td>
+          <td id="td">Fisika</td>
+          <td id="center">75</td>
+          <td id="center">76</td>
+          <td id="center">76</td>
+          <td id="center">B</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">3</td>
+          <td id="td">Kimia</td>
+          <td id="center">87</td>
+          <td id="center">78</td>
+          <td id="center">83</td>
+          <td id="center">B+</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">4</td>
+          <td id="td">Dasar Bidang Keahlian 4</td>
+          <td id="center">60</td>
+          <td id="center">62</td>
+          <td id="center">61</td>
+          <td id="center">C</td>
+        </tr>
+        <tr id="tr">
+          <td id="td" colspan="2"><b>C2.Dasar Program Keahlian</b></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+          <td id="td"></td>
+        </tr>
+        <tr id="tr">
+          <td id="center">1</td>
+          <td id="td">Dasar Program Keahlian 1</td>
+          <td id="center">67</td>
+          <td id="center">78</td>
+          <td id="center">74</td>
+          <td id="center">B-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">2</td>
+          <td id="td">Dasar Program Keahlian 2</td>
+          <td id="center">64</td>
+          <td id="center">79</td>
+          <td id="center">73</td>
+          <td id="center">B-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">3</td>
+          <td id="td">Dasar Program Keahlian 3</td>
+          <td id="center">78</td>
+          <td id="center">64</td>
+          <td id="center">70</td>
+          <td id="center">B-</td>
+        </tr>
+        <tr id="tr">
+          <td id="center">4</td>
+          <td id="td">Dasar Program Keahlian 4</td>
+          <td id="center">84</td>
+          <td id="center">89</td>
+          <td id="center">87</td>
+          <td id="center">A-</td>
+        </tr>
+      </table>
+
+      <h5 style="text-transform: uppercase; font-size: 22px">
+        b. catatan akademik
+      </h5>
+      <div id="note">
+        <p>
+          Ananda Peringkat Nilai : 1 dari 30 siswa. Prestasinya sangat baik,
+          perlu dipertahankan. Perlu meningkatkan kompetensi pengetahuan Muatan
+          Lokal, Dasar Bidang Keahlian 3. Ananda berhasil menguasai beberapa
+          mata pelajaran dengan sangat baik diantaranya Bahasa Indonesia, Seni
+          Budaya, dan Muatan Lokal3.
+        </p>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="box"></div>
+      <i>RAPORT SMK AL MAFATIN JAKARTA</i>
+      <div id="number">4</div>
+    </div>
+    <div style="margin-top: 30px; margin-left: calc(100% - 170px)">
+      <a href="#"><button>Cover</button></a>
+      <a href="biodata.html"><button>Biodata</button></a>
+      <a href="#header"><button>Nilai</button></a>
+    </div>
+  </body>
+</html>

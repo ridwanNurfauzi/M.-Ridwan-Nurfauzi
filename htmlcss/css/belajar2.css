@@ -1,0 +1,12 @@
+body {
+    font-size: 14px;
+    color: navy;
+}
+p {
+    font-family: calibri, helvetica, sans-serif;
+}
+h1, h2{
+    text-decoration: underline;
+    font-size: 23px;
+    color: green;
+}

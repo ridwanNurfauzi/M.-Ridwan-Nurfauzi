@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        List Minuman
+    </h1>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama Minuman</th>
+        </tr>
+        <tbody id="tb"></tbody>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Hapus Data</th>
+        </tr>
+        <tr>
+            <td>No urut :
+                <input type="number" name="no" id="no" value="1">
+            </td>
+            <td><input type="button" value="Hapus" onclick="fkurang()"></td>
+        </tr>
+    </table>
+    <script>
+        let minuman = ['Teh', 'Kopi', 'Jus', 'Susu'];
+
+        for (let a = 1; a <= minuman.length; a++) {
+            document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${minuman[a - 1]}</td></tr>`;
+        }
+
+        function fkurang() {
+            document.getElementById('tb').innerHTML = '';
+
+            // delete minuman[parseInt(document.getElementById('no').value) - 1]
+            minuman.splice(parseInt(document.getElementById('no').value) - 1,1);
+
+            for (let a = 1; a <= minuman.length; a++) {
+                document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${minuman[a - 1]}</td></tr>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

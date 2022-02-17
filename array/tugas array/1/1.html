@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>List Buah</h1>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama buah</th>
+        </tr>
+        <tbody id="tb"></tbody>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Tambahkan buah</th>
+        </tr>
+        <tr>
+            <td>
+                <select name="namab" id="namab">
+                    <option value="durian">durian</option>
+                    <option value="jeruk">jeruk</option>
+                    <option value="anggur">anggur</option>
+                </select>
+            </td>
+            <td><input type="button" value="Tambah" id="tambah" onclick="ftambah()"></td>
+        </tr>
+    </table>
+    <script>
+        let buah = ['apel', 'pisang', 'melon'];
+
+        for (let a = 1; a <= buah.length; a++) {
+            document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${buah[a - 1]}</td></tr>`;
+        }
+
+        function ftambah() {
+            document.getElementById('tb').innerHTML = '';
+            buah.push(document.getElementById('namab').value);
+            for (let a = 1; a <= buah.length; a++) {
+                document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${buah[a - 1]}</td></tr>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

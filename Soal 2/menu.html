@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Utama</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            background-color: #8f9;
+        }
+    </style>
+  </head>
+  <body>
+    <header><h1>Menu Utama</h1></header>
+    <article>
+        Selamat Anda berhasil login sebagai <b>
+        <script>
+          document.writeln(localStorage.getItem(`username`));
+        </script></b>
+    </article>
+  </body>
+</html>

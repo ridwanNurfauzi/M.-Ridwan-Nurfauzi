@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            font-family: Tahoma;
+        }
+
+        body {
+            background-color: #AAA;
+        }
+
+        #header {
+            position: fixed;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            height: 60px;
+            left: 0px;
+            top: 0px;
+            background-color: #AAA;
+            width: 100%;
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        #footer {
+            position: fixed;
+            text-align: center;
+            bottom: 0px;
+            background-color: #333;
+            color: #FfF;
+            width: 100%;
+            height: 50px;
+            padding-top: 30px;
+        }
+
+        #detail {
+            position: fixed;
+            right: 0px;
+            top: 0px;
+            width: 200px;
+            padding: 10px;
+            padding-top: 120px;
+            height: 120px;
+            background-color: #eee;
+            border-radius: 0px 0px 10px 10px;
+            font-family: monospace;
+            font-size: 16px;
+        }
+        #detail::-webkit-scrollbar{
+            height: 10px;
+            background: #555;
+            border-radius: 0px 0px 10px 10px;
+        }
+        #detail::-webkit-scrollbar-thumb{
+            background: #bbb;
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        #article {
+            position: relative;
+            margin-top: 120px;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: calc(100% -40px);
+            min-height: calc(100vh - 200px);
+            background-color: #FFF;
+            margin-bottom: 60px;
+            padding-top: 20px;
+            border-radius: 0px 0px 20px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="footer">Copyright &copy; 2022</div>
+
+    <div id="article">
+        <br>
+        <details>
+            <summary>Setor Tunai</summary>
+            <select id="setor">
+                <option value="50000">50000</option>
+                <option value="100000">100000</option>
+                <option value="150000">150000</option>
+                <option value="200000">200000</option>
+            </select>
+            <input type="button" value="Setor" onclick="fsetor()">
+        </details>
+        <br>
+        <details>
+            <summary>Tarik Tunai</summary>
+            <select id="tarik">
+                <option value="50000">50000</option>
+                <option value="100000">100000</option>
+                <option value="150000">150000</option>
+                <option value="200000">200000</option>
+            </select>
+            <input type="button" value="Tarik" onclick="ftarik()">
+        </details>
+        <br>
+        <details>
+            <summary>Nabung</summary>
+            <input type="number" id="nabung" min="0" value="0">
+            <input type="button" value="Nabung" onclick="fnabung()">
+        </details>
+        <br>
+        <input type="button" value="Exit" onclick="fexit()">
+    </div>
+
+    <div id="detail" style="overflow-x: scroll;">
+    </div>
+
+    <div id="header">
+        <h1>ATM BANK</h1>
+    </div>
+
+    <script>
+        let pin = null;
+
+        let saldo = 100000;
+
+        while ((pin == '' || pin == null)) {
+            pin = prompt('Masukkan pin');
+        }
+
+        function frefresh() {
+            document.getElementById('detail').innerHTML = 'PIN :<br>' + pin + '<br><br>Saldo : <br>' + saldo;
+        }
+
+        function fsetor() {
+            saldo += parseInt(document.getElementById('setor').value);
+            frefresh();
+        }
+
+        function ftarik() {
+            if (saldo - parseInt(document.getElementById('tarik').value) < 50000) {
+                alert('Maaf saldo Anda tidak cukup.');
+            }
+            else {
+                saldo -= parseInt(document.getElementById('tarik').value);
+            } frefresh();
+        }
+
+        function fnabung() {
+            saldo += parseInt(document.getElementById('nabung').value);
+            frefresh();
+        }
+
+        function fexit() {
+            frefresh();
+            pin = null;
+            while (pin == '' || pin == null) {
+                pin = prompt('Masukkan pin');
+            }
+            frefresh();
+        }
+
+        frefresh();
+    </script>
+</body>
+
+</html>

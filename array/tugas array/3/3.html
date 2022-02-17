@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .uppercase {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>List Alpabet</h1>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Alpabet</th>
+        </tr>
+        <tbody id="tb"></tbody>
+    </table>
+    <input type="button" value="Urutkan" onclick="furutkan()">
+
+    <script>
+        let alpabet = ['a', 'e', 'b', 'c', 'g', 'd', 'f', 'j', 'h',
+            'i', 'k', 'l', 'n', 'm', 'o', 'p', 'q', 'u', 'r', 's', 't',
+            'v', 'w', 'z', 'y', 'x'];
+
+        for (let a = 1; a <= alpabet.length; a++) {
+            document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td class="uppercase">${alpabet[a - 1]}</td></tr>`;
+        }
+
+        function furutkan() {
+            document.getElementById('tb').innerHTML = '';
+            for (let a = 1; a <= alpabet.length; a++) {
+                document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td class="uppercase">${alpabet.sort()[a - 1]}</td></tr>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

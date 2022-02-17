@@ -1,0 +1,7 @@
+1. Buatlah sample project desain web menggunakan css. Minimal Project terdiri dari :
+	. Halaman Awal Website yang berisi kumpulan informasi situs
+	. Halaman Login
+	. Halaman Register
+	. Halaman Menu Utama Pengguna (Setelah berhasil Login)
+3. Menu login dan register wajib menggunakan JavaScript
+4. Pengerjaan individu dilarang menyontek atau mengganggu teman

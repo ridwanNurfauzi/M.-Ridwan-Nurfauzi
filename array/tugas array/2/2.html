@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        List Bahasa Pemrograman
+    </h1>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Bahasa Pemrograman</th>
+        </tr>
+        <tbody id="tb"></tbody>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Hapus Data</th>
+        </tr>
+        <tr>
+            <td><input type="button" value="Hapus data atas" onclick="fhapusatas()"></td>
+            <td><input type="button" value="Hapus data bawah" onclick="fhapusbawah()"></td>
+        </tr>
+    </table>
+
+    <script>
+        let bahasa = ['C', 'C++', 'C#', 'Dart', 'Java', 'JavaScript', 'PHP', 'Python'];
+
+        for (let a = 1; a <= bahasa.length; a++) {
+            document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${bahasa[a - 1]}</td><tr>`;
+        }
+
+        function fhapusatas() {
+            document.getElementById('tb').innerHTML = '';
+            bahasa.shift();
+            for (let a = 1; a <= bahasa.length; a++) {
+                document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${bahasa[a - 1]}</td><tr>`;
+            }
+        }
+
+        function fhapusbawah() {
+            document.getElementById('tb').innerHTML = '';
+            bahasa.pop();
+            for (let a = 1; a <= bahasa.length; a++) {
+                document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${bahasa[a - 1]}</td><tr>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

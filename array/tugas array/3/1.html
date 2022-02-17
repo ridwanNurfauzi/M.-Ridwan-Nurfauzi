@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tabel Bilangan</h1>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                Filter :
+                <select name="filter" id="filter" onchange="ffilter()">
+                    <option value="semua">Semua</option>
+                    <option value="ganjil">Ganjil</option>
+                    <option value="genap">Genap</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Biner</th>
+            <th>Oktal</th>
+            <th>Desimal</th>
+            <th>Heksadesimal</th>
+        </tr>
+        <tbody id="tb"></tbody>
+    </table>
+
+    <script>
+        let angka = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        let angkaGanjil = angka.filter((a) => { return a % 2 != 0 });
+        let angkaGenap = angka.filter((a) => { return a % 2 == 0 });
+
+        for (let a = 0; a < angka.length; a++) {
+            document.getElementById('tb').innerHTML += `<tr><td>${a.toString(2)}</td><td>${a.toString(8)
+                }</td><td>${a.toString(10)}</td><td>${a.toString(16)}</td></tr>`;
+        }
+
+        function ffilter() {
+            document.getElementById('tb').innerHTML = '';
+
+            switch (document.getElementById('filter').value) {
+                case 'semua':
+                    for (let a = 0; a < angka.length; a++) {
+                        document.getElementById('tb').innerHTML += `<tr><td>${a.toString(2)}</td><td>${a.toString(8)
+                            }</td><td>${a.toString(10)}</td><td>${a.toString(16)}</td></tr>`;
+                    }
+                    break;
+                case 'ganjil':
+                    for (let a = 0; a < angkaGanjil.length; a++) {
+                        document.getElementById('tb').innerHTML += `<tr><td>${angkaGanjil[a].toString(2)}</td><td>${angkaGanjil[a].toString(8)
+                            }</td><td>${angkaGanjil[a].toString(10)}</td><td>${angkaGanjil[a].toString(16)}</td></tr>`;
+                    }
+                    break;
+                case 'genap':
+                for (let a = 0; a < angkaGenap.length; a++) {
+                        document.getElementById('tb').innerHTML += `<tr><td>${angkaGenap[a].toString(2)}</td><td>${angkaGenap[a].toString(8)
+                            }</td><td>${angkaGenap[a].toString(10)}</td><td>${angkaGenap[a].toString(16)}</td></tr>`;
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

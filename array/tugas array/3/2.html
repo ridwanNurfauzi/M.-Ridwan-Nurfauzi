@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>List Barang</h1>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama Barang</th>
+        </tr>
+        <tbody id="tb"></tbody>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Cek Barang</th>
+        </tr>
+        <tr>
+            <td>Nama Barang :
+                <input type="text" name="txt" id="txt">
+            </td>
+            <td><input type="button" value="Cek" onclick="fcek()"></td>
+        </tr>
+    </table>
+
+    <script>
+        let barang = ['Televisi', 'Mesin cuci', 'Dispenser', 'kursi', 'Meja'];
+
+        for (let a = 1; a <= barang.length; a++) {
+            document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${barang[a - 1]}</td></tr>`;
+        }
+
+        function fcek(){
+            if(barang.includes(document.getElementById('txt').value)){
+                alert(document.getElementById('txt').value+' ada dalam list');
+            }
+            else{
+                alert(document.getElementById('txt').value+' tidak ada dalam list');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Biodata</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Form Biodata</legend>
+        <p>
+          <label>Nama :</label>
+          <input type="text" name="nama" />
+        </p>
+        <p>
+          <label>Tempat, Tanggal Lahir :</label>
+          <input type="text" name="tempat" />
+          <input type="date" name="tgl" />
+        </p>
+        <p>
+          <label>Jenis Kelamin :</label>
+          <label
+            ><input type="radio" name="jk" value="laki-laki" />laki-laki</label
+          >
+          <label
+            ><input type="radio" name="jk" value="perempuan" />perempuan</label
+          >
+        </p>
+        <p>
+          <label>Agama :</label>
+          <select name="agama">
+            <option value="islam">Islam</option>
+            <option value="kristen">Kristen</option>
+            <option value="hindu">Hindu</option>
+            <option value="budha">Budha</option>
+          </select>
+        </p>
+        <p>
+          <label>Kelas :</label>
+          <input type="text" name="kelas" />
+        </p>
+        <p>
+          <label>Alamat :</label>
+          <textarea name="alamat"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Simpan" />
+          <input type="reset" value="Reset" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>

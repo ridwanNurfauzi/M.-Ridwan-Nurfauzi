@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <style>
+      * {
+        margin: 0px;
+        font-family: Tahoma;
+      }
+      #load {
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        background-color: #24fc;
+        position: fixed;
+      }
+
+      #header {
+        position: fixed;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        height: 60px;
+        left: 0px;
+        top: 0px;
+        background-color: #9d9d9d;
+        width: 100%;
+        border-radius: 0px 0px 20px 20px;
+        color: #333;
+      }
+      #footer {
+        position: fixed;
+        text-align: center;
+        bottom: 0px;
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        height: 50px;
+        padding-top: 30px;
+      }
+      #article {
+        font-size: 25px;
+        position: relative;
+        margin-top: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: calc(100% -40px);
+        min-height: calc(100vh - 200px);
+        background-color: #fff;
+        margin-bottom: 60px;
+        padding-top: 20px;
+        text-align: center;
+        border-radius: 0px 0px 20px 20px;
+      }
+      .load {
+        position: relative;
+        margin-top: calc(50vh - 60px);
+        color: #fffe;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="footer">Copyright &copy; 2022</div>
+    <div id="article">
+      <form name="flogin">
+        <p>
+          <label>PIN :</label>
+          <input type="text" name="pin" placeholder="isi disini" />
+        </p>
+        <p>
+          <input
+            type="button"
+            name="submit"
+            onclick="_flogin()"
+            value="login"
+          />
+        </p>
+      </form>
+    </div>
+
+    <div id="header">
+      <h1>LOGIN</h1>
+    </div>
+
+    <div id="load">
+      <center class="load">
+        <h1>Selamat Datang di ATM</h1>
+      </center>
+    </div>
+    <script>
+      function _flogin() {
+        if (flogin.pin.value == 1234) {
+          localStorage.setItem("login", "true");
+          alert("Anda berhasil login");
+          location.href = "ATM.html";
+        } else {
+          alert("PIN salah.");
+        }
+      }
+
+      setTimeout(() => {
+        document.getElementById("load").style.visibility = "hidden";
+      }, 2000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+table{
+    width: 100%;
+    transition: 1s;
+}
+
+.sb{
+    background-color: #aaa;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.bil{
+    background-color: #3fb;
+}
+#hov:hover{
+    background-color: #f55;
+}
+
+.hov:hover{
+    background-color: #de6;
+}
+table, tr, td, th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    transition: 500ms;
+}

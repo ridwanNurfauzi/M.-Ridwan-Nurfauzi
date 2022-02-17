@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      *{
+        margin: 0px;
+      }
+      body {
+        background-image: url("background.png");
+      }
+      .panel {
+        /* background-color: #fffb; */
+        background: linear-gradient(to right, #666b, #dddb);
+        position: fixed;
+        width: 800px;
+        height: 400px;
+        top: calc(50% - 200px);
+        left: calc(50% - 400px);
+        border-radius: 20px;
+      }
+      .icon {
+        background-image: url("login.png");
+        background-size: 100%;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: calc(50% - 50px);
+        top: -50px;
+        border-radius: 50px;
+      }
+      #usn {
+        position: relative;
+        width: 300px;
+        top: 0px;
+        left: calc(50% - 150px);
+        text-align: center;
+      }
+      #title {
+        position: relative;
+        top: -20px;
+        text-align: center;
+      }
+      #subm{
+          border: none;
+          background-color: green;
+          color: #FFF;
+          width: 200px;
+          height: 40px;
+          font-size: 20px;
+          position: relative;
+          top: 200px;
+      }
+      .link{
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        top: 120px;
+        left: -180px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="icon"></div>
+      <h1 id="title">Login</h1>
+      <form id="mform" name="a" method="post">
+        <input type="text" name="usn" id="usn" placeholder="User Name" required/>
+        <input type="button" value="Masuk" id="subm" onclick="validing()">
+        <a href="register.html" class="link">Belum punya <i>Username</i></a>
+      </form>
+      <script>
+        var usn = document.getElementById(`usn`);
+        function validing(){
+          if(usn.value == "" || usn.value ==null)
+          {
+            return alert("Username tidak dapat dikosongkan.");
+          }
+          if(usn.value == localStorage.getItem(`username`))
+          {
+            return location.replace("menu.html");
+          }
+          else{
+            return alert("Username "+ usn.value +" tidak ditemukan.");
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

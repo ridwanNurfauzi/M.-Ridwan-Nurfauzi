@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>List Barang</h1>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama barang</th>
+        </tr>
+        <tbody id="tb"></tbody>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Tambahkan barang</th>
+        </tr>
+        <tr>
+            <td>Nama barang :
+                <input type="text" name="namab" id="namab" onkeydown="setin()" onkeyup="setin()">
+            </td>
+            <td><input type="button" value="Tambah" id="tambah" onclick="ftambah()"></td>
+        </tr>
+        <tr>
+            <td>No urut : <input type="number" name="no" id="no" min="1" value="1"></td>
+        </tr>
+    </table>
+    <script>
+        let barang = ['Televisi', 'Setrika', 'Gelas'];
+
+        for (let a = 1; a <= barang.length; a++) {
+            document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${barang[a - 1]}</td></tr>`;
+        }
+
+        function setin(){
+            if(document.getElementById('namab').value[0] == ' '){
+                document.getElementById('namab').value = document.getElementById('namab').value.substr(1, document.getElementById('namab').value.length);
+            }
+        }
+
+        function ftambah() {
+            document.getElementById('tb').innerHTML = '';
+            if (document.getElementById('namab').value == '' || document.getElementById('namab').value == null
+                || document.getElementById('namab').value == ' ') {
+                alert('Input nama barang belum diisi.');
+            }
+            else {
+                barang[parseInt(document.getElementById('no').value) - 1] = document.getElementById('namab').value;
+            }
+            for (let a = 1; a <= barang.length; a++) {
+                document.getElementById('tb').innerHTML += `<tr><td>${a}</td><td>${barang[a - 1]}</td></tr>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

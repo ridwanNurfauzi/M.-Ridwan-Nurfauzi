@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="f">
+        <h1>Form Penjualan Tiket Pesawat</h1><br>
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td colspan="3"><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Tujuan</td>
+                <td>
+                    <select name="tujuan" id="tujuan" onchange="ftujuan()">
+                        <option value="none" hidden>--PILIH TUJUAN--</option>
+                        <option value="amerika">Amerika</option>
+                        <option value="afrika">Afrika</option>
+                        <option value="eropa">Eropa</option>
+                    </select>
+                </td>
+                <td>Harga</td>
+                <td><input type="text" name="harga" readonly></td>
+            </tr>
+            <tr>
+                <td>Tipe Tiket</td>
+                <td>
+                    <select name="tipe" id="tipe" onchange="ftipe()">
+                        <option value="none" hidden>--PILIH TIPE--</option>
+                        <option value="vvip">VVIP</option>
+                        <option value="vip">VIP</option>
+                        <option value="ekonomi">Ekonomi</option>
+                    </select>
+                </td>
+                <td>Biaya Tambahan</td>
+                <td><input type="text" name="bTambahan" readonly></td>
+            </tr>
+            <tr>
+                <td>Member?</td>
+                <td align="center"><input type="checkbox" name="member" id="member" onchange="fmember()"></td>
+                <td>Diskon</td>
+                <td><input type="text" name="diskon" readonly></td>
+            </tr>
+            <tr>
+                <td>Jumlah Tiket</td>
+                <td><input type="text" name="jumlaht"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Hitung" style="width: 100px;" onclick="fhitung()"></td>
+                <td><input style="width: 100px;" type="reset" value="Clear"></td>
+            </tr>
+            <tr>
+                <td>Total Harga</td>
+                <td><input type="text" name="total"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        let harga_int = 0;
+        let biayaT_int = 0;
+        let diskon_int = 0;
+
+        function ftujuan() {
+            switch (f.tujuan.value) {
+                case "amerika":
+                    harga_int = 1000000;
+                    break;
+                case "afrika":
+                    harga_int = 500000;
+                    break;
+                case "eropa":
+                    harga_int = 250000;
+                    break;
+                default:
+                    break;
+            }
+            f.harga.value = harga_int;
+        }
+        function ftipe() {
+            switch (f.tipe.value) {
+                case "vvip":
+                    biayaT_int = 0.5;
+                    break;
+                case "vip":
+                    biayaT_int = 0.1;
+                    break;
+                case "ekonomi":
+                    biayaT_int = 0;
+                    break;
+                default:
+                    break;
+            }
+            f.bTambahan.value = `${harga_int * biayaT_int}`;
+        }
+        function fmember() {
+            if (f.member.checked) {
+                diskon_int = 0.1;
+            }
+            else {
+                diskon_int = 0;
+            }
+            f.diskon.value = `${harga_int * diskon_int}`;
+        }
+        function fhitung() {
+            f.total.value = `${f.jumlaht.value * (harga_int - (harga_int * diskon_int) + (biayaT_int*harga_int))}`;
+        }
+    </script>
+</body>
+
+</html>

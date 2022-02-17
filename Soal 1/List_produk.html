@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      header {
+        width: 100%;
+        height: 50px;
+        background-color: #1d2;
+        color: #fff;
+      }
+      #header {
+        text-align: center;
+      }
+
+      nav {
+        width: 100%;
+        height: 24px;
+        background-color: #de4;
+        text-align: center;
+        color: #fff;
+      }
+      a {
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      article {
+        margin-top: 20px;
+      }
+      p {
+        font-size: 20px;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0px;
+        font-size: 18px;
+        background-color: #343434;
+        color: #dedede;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+        font-size: 18px;
+      }
+      th {
+        height: 50px;
+        background-color: #56f;
+      }
+
+      table {
+        position: relative;
+        width: 1200px;
+        left: 50%;
+        margin-left: -600px;
+      }
+      #lProduk {
+        height: 40px;
+      }
+      #lProduk:hover {
+        background-color: #aaa;
+      }
+
+      #code {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="header">Produk</h1>
+    </header>
+
+    <nav>
+      <a href="Beranda.html">Beranda</a> |
+      <a href="javascript:alert('Anda sudah berada di Halaman ini.')"
+        >List Produk</a
+      >
+      | <a href="Tentang.html">Tentang</a> |
+      <a href="Kontak.html">Kontak</a>
+    </nav>
+
+    <article>
+      <table>
+        <tr>
+          <th>No.</th>
+          <th>Nama Barang</th>
+          <th>Harga Barang</th>
+          <th>Kode Barang</th>
+        </tr>
+        <script>
+          var produk = [
+            "Baju Batik",
+            "Baju Muslim",
+            "Pakaian Anak Laki-laki SD",
+            "Pakaian Anak Perempuan SD",
+            "Pakaian Anak Laki-laki SMP",
+            "Pakaian Anak Perempuan SMP",
+            "Pakaian Anak Laki-laki SMK/SMA",
+            "Pakaian Anak Perempuan SMK/SMA",
+            "Sweater",
+            "Jaket",
+            "Celana Jeans",
+            "Baju Lengan Pendek",
+            "Baju Lengan Panjang",
+            "Baju Olah Raga",
+          ];
+          var harga_produk = [
+            `Rp${120000}`,
+            `Rp${135000}`,
+            `Rp${320000}`,
+            `Rp${330000}`,
+            `Rp${340000}`,
+            `Rp${330000}`,
+            `Rp${456000}`,
+            `Rp${440000}`,
+            `Rp${210000}`,
+            `Rp${215000}`,
+            `Rp${200500}`,
+            `Rp${120000}`,
+            `Rp${125000}`,
+            `Rp${310500}`,
+          ];
+
+          for (var i = 0; i <= produk.length - 1; i++) {
+            document.writeln(
+              `<tr id="lProduk"> <td>${i + 1}.</td> <td>${produk[i]}</td> <td>${
+                harga_produk[i]
+              }</td> <td id="code">${i.toString(16)}</td> </tr>`
+            );
+          }
+        </script>
+      </table>
+    </article>
+
+    <footer>Copyright 2021 &copy; M. Ridwan</footer>
+  </body>
+</html>

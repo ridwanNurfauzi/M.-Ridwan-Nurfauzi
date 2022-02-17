@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#aac">
+    <title>Destinasi Wisata</title>
+    <style>
+        * {
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #aac;
+        }
+
+        #header {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            background: #aac;
+            text-align: center;
+            top: 0px;
+            margin-top: 0px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        #article {
+            position: relative;
+            margin-top: 100px;
+            margin-bottom: 80px;
+            background-color: #fff;
+            width: 100%;
+            min-height: 100vh;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-bottom: 10px;
+        }
+
+        #footer {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            background-color: #ddd;
+            bottom: 0px;
+            color: #ddd;
+            text-align: center;
+            background: linear-gradient(to right, #333, #aaa);
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .btn {
+            background-color: #eee;
+            color: #000;
+            width: 100px;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+        .btn:active {
+            background-color: #aaa;
+        }
+
+        .num {
+            width: 60px;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .td {
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="footer"><br><br><br>Copyright &copy; 2022 M. Ridwan</div>
+
+    <div id="article">
+        <form name="kasir">
+            <br>
+            <div style="margin: 12px; overflow-x: scroll;">
+                <table style="width: 100%;" cellpadding="2">
+                    <tr>
+                        <th colspan="4">
+                            <h2>Tiket Destinasi</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="width: 32px;">No</th>
+                        <th>Nama Destinasi</th>
+                        <th>Jumlah tiket</th>
+                        <th>Harga</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Bukit bintang</td>
+                        <td><input type="number" name="bukit" id="bukit" value="0" min="0" class="num"
+                                onchange="change()" onkeydown="change()" onclick="change()" onkeyup="change()"></td>
+                        <td>Rp 10.000</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Pantai sadranan</td>
+                        <td><input type="number" name="pantai" id="pantai" value="0" min="0" class="num"
+                                onchange="change()" onkeydown="change()" onclick="change()" onkeyup="change()"></td>
+                        <td>Rp 15.000</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Candi borobudur</td>
+                        <td><input type="number" name="candib" id="candib" value="0" min="0" class="num"
+                                onchange="change()" onkeydown="change()" onclick="change()" onkeyup="change()"></td>
+                        <td>Rp 50.000</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Candi prambanan</td>
+                        <td><input type="number" name="candip" id="candip" value="0" min="0" class="num"
+                                onchange="change()" onkeydown="change()" onclick="change()" onkeyup="change()"></td>
+                        <td>Rp 50.000</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Keraton yogyakarta</td>
+                        <td><input type="number" name="keraton" id="keraton" value="0" min="0" class="num"
+                                onchange="change()" onkeydown="change()" onclick="change()" onkeyup="change()"></td>
+                        <td>Rp 5.000</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Malioboro</td>
+                        <td><input type="number" name="malioboro" id="malioboro" value="0" min="0" class="num"
+                                onchange="change()" onkeydown="change()" onclick="change()" onkeyup="change()"></td>
+                        <td>Rp 5.000</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td colspan="3">
+                            <details>
+                                <summary>Pendopo Lawas</summary>
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <th colspan="4">
+                                            <h3>Cafe</h3>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th style="width: 30px;">No</th>
+                                        <th>Nama Pesanan</th>
+                                        <th>Jumlah</th>
+                                        <th>Harga</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Minuman</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>Kopi hangat</td>
+                                        <td><input type="number" name="kopiha" id="kopiha" value="0" min="0" class="num"
+                                                onchange="change()" onkeydown="change()" onclick="change()"
+                                                onkeyup="change()"></td>
+                                        <td>Rp 5.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>Kopi dingin</td>
+                                        <td><input type="number" name="kopidi" id="kopidi" value="0" min="0" class="num"
+                                                onchange="change()" onkeydown="change()" onclick="change()"
+                                                onkeyup="change()"></td>
+                                        <td>Rp 5.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>Teh manis</td>
+                                        <td><input type="number" name="teh" id="teh" value="0" min="0" class="num"
+                                                onchange="change()" onkeydown="change()" onclick="change()"
+                                                onkeyup="change()"></td>
+                                        <td>Rp 4.500</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Makanan</th>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>Nasi goreng</td>
+                                        <td><input type="number" name="nasgor" id="nasgor" value="0" min="0" class="num"
+                                                onchange="change()" onkeydown="change()" onclick="change()"
+                                                onkeyup="change()"></td>
+                                        <td>Rp 6.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td>Nasi kuning</td>
+                                        <td><input type="number" name="naskun" id="naskun" value="0" min="0" class="num"
+                                                onchange="change()" onkeydown="change()" onclick="change()"
+                                                onkeyup="change()"></td>
+                                        <td>Rp 5.500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>Mie goreng</td>
+                                        <td><input type="number" name="migor" id="migor" value="0" min="0" class="num"
+                                                onchange="change()" onkeydown="change()" onclick="change()"
+                                                onkeyup="change()">
+                                        </td>
+                                        <td>Rp 5.000</td>
+                                    </tr>
+                                </table>
+                            </details>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Goa pindul</td>
+                        <td><input type="number" name="goa" id="goa" min="0" value="0" class="num" onchange="change()"
+                                onkeydown="change()" onclick="change()" onkeyup="change()"></td>
+                        <td>Rp 100.000</td>
+                    </tr>
+                </table>
+                <br>
+                <hr>
+                <br>
+                <table style="width: 100%; max-width: 100%;" cellpadding="2">
+                    <tr>
+                        <th colspan="4">
+                            <h2>Pembayaran</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th style="width: 240px;">Uang Pembayaran</th>
+                        <th>Diskon</th>
+                        <th>Kembalian</th>
+                    </tr>
+                    <tr>
+                        <td id="total" class="td"></td>
+                        <td class="td">Rp <input type="number" name="bayar" id="bayar" value="0" min="0"
+                                style="width: calc(100% - 40px);"></td>
+                        <td id="diskon" class="td"></td>
+                        <td id="kembalian" class="td"></td>
+                    </tr>
+                </table>
+                <br>
+                <div align="center">
+                    <input type="reset" value="Atur Ulang" class="btn" onclick="ulang()">
+                    <input type="button" name="pesan" value="Memesan" class="btn" onclick="memesan()">
+                </div>
+                <br>
+            </div>
+        </form>
+    </div>
+
+    <div id="header">
+        <br>
+        <h1>Kasir online</h1>
+    </div>
+
+    <script>
+        var total = document.getElementById('total');
+        var diskon = document.getElementById('diskon');
+        var kembalian = document.getElementById('kembalian');
+
+        var totalint = 0;
+
+        function ulang() {
+            total.innerHTML = '';
+            diskon.innerHTML = '';
+            kembalian.innerHTML = '';
+        }
+
+        function change() {
+            totalint = ((kasir.bukit.value * 10000) + (kasir.pantai.value * 15000) + (kasir.candib.value * 50000) +
+                (kasir.candip.value * 50000) + (kasir.keraton.value * 5000) + (kasir.malioboro.value * 5000) + (kasir.kopiha.value * 5000) +
+                (kasir.kopidi.value * 5000) + (kasir.teh.value * 4500) + (kasir.nasgor.value * 6000) + (kasir.naskun.value * 5500) +
+                (kasir.migor.value * 5000) + (kasir.goa.value * 100000));
+
+            total.innerHTML = `Rp ${totalint}`;
+        }
+
+        function memesan() {
+            totalint = ((kasir.bukit.value * 10000) + (kasir.pantai.value * 15000) + (kasir.candib.value * 50000) +
+                (kasir.candip.value * 50000) + (kasir.keraton.value * 5000) + (kasir.malioboro.value * 5000) + (kasir.kopiha.value * 5000) +
+                (kasir.kopidi.value * 5000) + (kasir.teh.value * 4500) + (kasir.nasgor.value * 6000) + (kasir.naskun.value * 5500) +
+                (kasir.migor.value * 5000) + (kasir.goa.value * 100000));
+
+            if (totalint == 0) {
+                alert("Mohon maaf anda belum memesan apapun.");
+            }
+            else if (kasir.bayar.value < totalint) {
+                alert("Mohon maaf uang pembayaran tidak cukup.");
+            }
+            // Diskon
+            // else if(totalint > 1000000){
+            //     alert("Selamat Anda mendapatkan diskon 10% karena total pembayaran Anda melebihi Rp 1.000.000 .");
+            //     diskon.innerHTML = `Rp ${(totalint * 10/100)}`;
+            //     kembalian.innerHTML = `Rp ${kasir.bayar.value - (totalint - (totalint * 10/100))}`;
+            // }
+            // else if(totalint > 700000){
+            //     alert("Selamat Anda mendapatkan diskon 7% karena total pembayaran Anda melebihi Rp 700.000 .");
+            //     diskon.innerHTML = `Rp ${(totalint * 7/100)}`;
+            //     kembalian.innerHTML = `Rp ${kasir.bayar.value - (totalint - (totalint * 7/100))}`;
+            // }
+            // else if(totalint > 500000){
+            //     alert("Selamat Anda mendapatkan diskon 5% karena total pembayaran Anda melebihi Rp 500.000 .");
+            //     diskon.innerHTML = `Rp ${(totalint * 5/100)}`;
+            //     kembalian.innerHTML = `Rp ${kasir.bayar.value - (totalint - (totalint * 5/100))}`;
+            // }
+            else if ((parseInt(kasir.kopiha.value) + parseInt(kasir.kopidi.value) + parseInt(kasir.teh.value) +
+                parseInt(kasir.nasgor.value) + parseInt(kasir.naskun.value) + parseInt(kasir.migor.value)) > 12 &&
+                (parseInt(kasir.bukit.value) + parseInt(kasir.pantai.value) + parseInt(kasir.candib.value) +
+                parseInt(kasir.candip.value) + parseInt(kasir.keraton.value) + parseInt(kasir.malioboro.value) +
+                parseInt(kasir.goa.value)) > 10) {
+
+                alert("Selamat Anda mendapatkan diskon 8% dari pemesanan lebih dari 10 tiket, " +
+                    "dan diskon 4% dari pemesanan lebih dari 12 makanan/minuman.");
+                diskon.innerHTML = `Rp ${totalint * 8 / 100} + Rp ${totalint * 4 / 100}`;
+                kembalian.innerHTML = `Rp ${kasir.bayar.value - (totalint - (totalint * 8 / 100) - (totalint * 4 / 100))}`;
+            }
+            else if (parseInt(kasir.kopiha.value) + parseInt(kasir.kopidi.value) + parseInt(kasir.teh.value) +
+                parseInt(kasir.nasgor.value) + parseInt(kasir.naskun.value) + parseInt(kasir.migor.value) > 12) {
+                alert("Selamat Anda mendapatkan diskon 4% dari pemesanan lebih dari 12 makanan/minuman.");
+                diskon.innerHTML = `Rp ${totalint * 4 / 100}`;
+                kembalian.innerHTML = `Rp ${kasir.bayar.value - (totalint - (totalint * 4 / 100))}`;
+            }
+            else if (parseInt(kasir.bukit.value) + parseInt(kasir.pantai.value) + parseInt(kasir.candib.value) +
+                parseInt(kasir.candip.value) + parseInt(kasir.keraton.value) + parseInt(kasir.malioboro.value) +
+                parseInt(kasir.goa.value) > 10) {
+                alert("Selamat Anda mendapatkan diskon 8% dari pemesanan lebih dari 10 tiket.");
+                diskon.innerHTML = `Rp ${totalint * 8 / 100}`;
+                kembalian.innerHTML = `Rp ${kasir.bayar.value - (totalint - (totalint * 8 / 100))}`;
+            }
+            // Akhir Diskon
+            else {
+                diskon.innerHTML = '';
+                kembalian.innerHTML = `Rp ${kasir.bayar.value - totalint}`;
+            }
+        }
+    </script>
+</body>
+
+</html>
