@@ -12,10 +12,7 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-    <link
-      rel="icon"
-      href="favicon.ico"
-    />
+    <link rel="icon" href="favicon.ico" />
 
     <title>PPDB SMK Assalaam Bandung</title>
     <style>
@@ -49,13 +46,14 @@
       </div>
     </div>
 
-    <div class="custom">
-      <h4>Data Siswa</h4>
-      <br />
-      <form>
+    <form>
+      <div class="custom">
+        <h4>Data Siswa</h4>
+        <br />
+
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Jurusan</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Jurusan</label>
+          <div class="col-sm-8">
             <input
               list="dataJurusan"
               class="form-control"
@@ -70,8 +68,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Nama Lengkap</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Nama Lengkap</label>
+          <div class="col-sm-8">
             <input
               type="text"
               class="form-control"
@@ -81,8 +79,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Jenis Kelamin</label>
+          <div class="col-sm-8">
             <label>
               <input type="radio" name="inputJenisK" id="lakilaki" />
               Laki - Laki </label
@@ -94,8 +92,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Tempat Lahir</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Tempat Lahir</label>
+          <div class="col-sm-8">
             <input
               type="text"
               class="form-control"
@@ -105,8 +103,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Tanggal Lahir</label>
+          <div class="col-sm-8">
             <input
               type="date"
               class="form-control"
@@ -116,8 +114,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Nomor HP Siswa</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Nomor HP Siswa</label>
+          <div class="col-sm-8">
             <input
               type="number"
               class="form-control"
@@ -127,8 +125,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Email</label>
+          <div class="col-sm-8">
             <input
               type="email"
               class="form-control"
@@ -138,8 +136,8 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Alamat</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Alamat</label>
+          <div class="col-sm-8">
             <textarea
               class="form-control"
               id="inputAlamat"
@@ -148,22 +146,42 @@
           </div>
         </div>
         <div class="form-group row">
-          <label class="col-sm-2 col-form-label">Asal Sekolah</label>
-          <div class="col-sm-10">
+          <label class="col-sm-4 col-form-label">Asal Sekolah</label>
+          <div class="col-sm-8">
             <input
-            type="text"
+              type="text"
               class="form-control"
               id="inputAlamat"
               placeholder="Asal Sekolah"
             />
           </div>
         </div>
-      </form>
-    </div>
+      </div>
 
-    <div class="custom">
+      <div class="custom">
         <h4>Data Orang Tua Siswa</h4>
-    </div>
+        <br />
+        <div class="form-group row">
+          <label class="col-sm-4 col-form-label">Nama Lengkap Ayah / Ibu / Wali</label>
+          <div class="col-sm-2">
+            <select class="form-control" name="ortu" id="ortu">
+              <option value="PILIH" hidden>---PILIH---</option>
+              <option value="Ayah">Ayah</option>
+              <option value="Ibu">Ibu</option>
+              <option value="Wali">Wali</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              id="inputNama"
+              placeholder="Nama Lengkap"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
