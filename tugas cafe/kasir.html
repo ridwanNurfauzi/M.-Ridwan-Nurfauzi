@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -96,8 +95,10 @@
 
     <script>
       if (localStorage.getItem("edited") != "true") {
-        $("#tb")[0].innerHTML = `<tr><th colspan="4" style="text-align: center;">Makanan</th></tr>`;
-        localStorage.setItem("makanan","['Pisang goreng', 'Roti bakar']")
+        $(
+          "#tb"
+        )[0].innerHTML = `<tr><th colspan="4" style="text-align: center;">Makanan</th></tr>`;
+        localStorage.setItem("makanan", "['Pisang goreng', 'Roti bakar']");
       }
     </script>
   </body>
