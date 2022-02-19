@@ -63,25 +63,34 @@
         }
       }
 
-      .button1{
-        background-color: #4f28fd;color: #FFF;
+      .button1 {
+        background-color: #4f28fd;
+        color: #fff;
       }
-      .button2{
-        color: #FFF;
+      .button2 {
+        color: #fff;
+      }
+      .button4{
+        background-color: #0000;
+        border: 1px solid #e9c600;
+        color: #e9c600;
+      }
+      .button4:hover{
+        background-color: #e9c60044;
+        box-shadow: 0 0 10px 10px #e9c60044;
       }
 
-      .button1:hover{
+      .button1:hover {
         box-shadow: 0 0 10px 10px #4f28fd44;
-        color: #FFF;
+        color: #fff;
       }
-      .button2:hover{
+      .button2:hover {
         box-shadow: 0 0 10px 10px #f0f00066;
-        color: #FFF;
+        color: #fff;
       }
-      .button3:hover{
+      .button3:hover {
         box-shadow: 0 0 10px 10px #ff0e0e44;
       }
-
     </style>
   </head>
   <body>
@@ -100,12 +109,12 @@
         Apabila anda telah melakukan pendaftaran, silahkan klik tombol "Cek
         Status Pendaftaran"
       </p>
+      <input type="button" value="Cek Status Pendaftaran" class="btn button1" />
       <input
         type="button"
-        value="Cek Status Pendaftaran"
-        class="btn button1"
+        value="Kembali ke Home"
+        class="btn btn-warning button2"
       />
-      <input type="button" value="Kembali ke Home" class="btn btn-warning button2"/>
       <a href="https://smkassalaambandung.sch.id"
         ><input
           type="button"
@@ -289,7 +298,8 @@
         <div class="form-group row">
           <div class="col-sm-4 col-form-label"></div>
           <div class="col-sm-8">
-            
+            <input type="button" value="Simpan & Daftar" class="btn button1" />
+            <input type="reset" value="Reset" class="btn button4">
           </div>
         </div>
       </div>
