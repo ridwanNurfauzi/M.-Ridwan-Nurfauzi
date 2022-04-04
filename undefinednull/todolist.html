@@ -8,12 +8,23 @@
 </head>
 <body>
     <h1>Makanan Kesukaan Saya</h1>
-    <input type="text">
-    <input type="button" value="Tambah">
+    <input type="text" id="inp">
+    <input type="button" value="Tambah" onclick="tambah()">
     <ul></ul>
 
     <script>
-        
+        let listdata = document.querySelectorAll('li');
+        let ul = document.querySelectorAll('ul');
+        let inp = document.querySelector('#inp')
+
+        function tambah (){
+            if(inp.value === ''){
+                alert('input tidak bisa kosong')
+            }
+            else{
+                
+            }
+        }
     </script>
 </body>
 </html>
