@@ -1,3 +1,3 @@
 git push -u ori main
 
-instant : git add . && git commit -m "mengubah" && git push -u ori main
+instant : git add . && git commit -m "mengubah" && git push -u origin main
