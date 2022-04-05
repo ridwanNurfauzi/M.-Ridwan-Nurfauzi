@@ -24,7 +24,7 @@
 
         function tampilkan(){
             ul[0].innerHTML= '';
-            for(let i=0; i <= data.length-1; i++){
+            for(let i=0; i < data.length; i++){
                 ul[0].innerHTML += '<li>'+data[i]+' <span onclick="hapus('+i+')">&times;</span></li>';
             }
         }
