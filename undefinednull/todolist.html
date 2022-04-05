@@ -15,16 +15,36 @@
     <script>
         let listdata = document.querySelectorAll('li');
         let ul = document.querySelectorAll('ul');
-        let inp = document.getElementById('inp')
+        let inp = document.getElementById('inp');
+
+        let data = [
+            'mie',
+            'Bakso'
+        ]
+
+        function tampilkan(){
+            ul[0].innerHTML= '';
+            for(let i=0; i <= data.length-1; i++){
+                ul[0].innerHTML += '<li>'+data[i]+' <span onclick="hapus('+i+')">&times;</span></li>';
+            }
+        }
 
         function tambah (){
             if(inp.value === ''){
                 alert('input tidak bisa kosong')
             }
             else{
-                
+                data.push(inp.value);
             }
+            tampilkan()
         }
+
+        function hapus(num){
+            data.splice(num,1)
+            tampilkan();
+        }
+
+        tampilkan();
     </script>
 </body>
 </html>
