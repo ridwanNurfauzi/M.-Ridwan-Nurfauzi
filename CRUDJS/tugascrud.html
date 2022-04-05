@@ -9,8 +9,8 @@
 <body>
     <fieldset>
         <legend>Input Form</legend>
-        <input type="text" name="barang"  placeholder="Input . . ." id="">
-        <input type="button" onclick="addBarang()" value="Tambah">
+        <input type="text" name="inp"  placeholder="Input . . ." id="">
+        <input type="button" onclick="tambah()" value="Tambah">
     </fieldset>
 
     <div>
@@ -27,8 +27,35 @@
         function tampilkan(){
             let listData = document.getElementById('list-data');
             listData.innerHTML = '';
-            for(let i = 0; i < listData)
+            for(let i = 0; i < data.length;i++){
+                let edit = `<td><a href='javascript:edit(${i})'>Edit</a></td>`;
+                let hapus = `<td><a href='javascript:hapus(${i})'>Hapus</a></td>`;
+                listData.innerHTML += `<tr><td>${data[i]}</td>${edit}${hapus}</tr>`;
+            }
         }
+
+        function tambah(){
+            var input = document.querySelector("input[name=inp]");
+            if(input.value != '')
+            data.push(input.value);
+            else
+            alert('Input tidak bisa kosong.')
+            tampilkan();
+        }
+
+        function edit(num){
+            namaBaru = prompt("Ganti nama", data[num])
+            ;if(namaBaru != null)
+            data[num] = namaBaru;
+            tampilkan();
+        }
+
+        function hapus(num){
+            data.splice(num, '1')
+            ;tampilkan();
+        }
+
+        tampilkan()
     </script>
 </body>
 </html>
