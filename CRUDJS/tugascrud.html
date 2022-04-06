@@ -28,9 +28,9 @@
             let listData = document.getElementById('list-data');
             listData.innerHTML = '';
             for(let i = 0; i < data.length;i++){
-                let edit = `<td><a href='javascript:edit(${i})'>Edit</a></td>`;
-                let hapus = `<td><a href='javascript:hapus(${i})'>Hapus</a></td>`;
-                listData.innerHTML += `<tr><td>${data[i]}</td>${edit}${hapus}</tr>`;
+                let edit = `<td><a href='javascript:edit(${i})'>Edit</a></td>`
+                ;let hapus = `<td><a href='javascript:hapus(${i})'>Hapus</a></td>`
+                ;listData.innerHTML += `<tr><td>${data[i]}</td>${edit}${hapus}</tr>`;
             }
         }
 
@@ -46,8 +46,8 @@
         function edit(num){
             namaBaru = prompt("Ganti nama", data[num])
             ;if(namaBaru != null)
-            data[num] = namaBaru;
-            tampilkan();
+            data[num] = namaBaru
+            ;tampilkan();
         }
 
         function hapus(num){
