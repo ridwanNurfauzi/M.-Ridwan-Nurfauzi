@@ -25,9 +25,9 @@
         ]
 
         ;function tampilkan(){
-            let listData = document.getElementById('list-data');
-            listData.innerHTML = '';
-            for(let i = 0; i < data.length;i++){
+            let listData = document.getElementById('list-data')
+            ;listData.innerHTML = ''
+            ;for(let i = 0; i < data.length;i++){
                 let edit = `<td><a href='javascript:edit(${i})'>Edit</a></td>`
                 ;let hapus = `<td><a href='javascript:hapus(${i})'>Hapus</a></td>`
                 ;listData.innerHTML += `<tr><td>${data[i]}</td>${edit}${hapus}</tr>`;
@@ -35,8 +35,8 @@
         }
 
         function tambah(){
-            var input = document.querySelector("input[name=inp]");
-            if(input.value != '')
+            var input = document.querySelector("input[name=inp]")
+            ;if(input.value != '')
             data.push(input.value)
             ;else
             alert('Input tidak bisa kosong.')
