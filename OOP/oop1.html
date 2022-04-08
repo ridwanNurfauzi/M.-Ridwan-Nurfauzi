@@ -5,12 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table,tr,th,td{
+            border: 1px solid #000;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <table>
+    <table cellpadding="6">
         <tr>
-            <th></th>
+            <th rowspan="2">Object</th>
+            <th colspan="2">Property</th>
+            <th colspan="2">method</th>
         </tr>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+        <tbody id="tb"></tbody>
     </table>
+
+    <script>
+        let objek = {
+            bola: {
+                nama: "Bola basket",
+                diameter: "30cm",
+                warna:"Jingga",
+
+                ditendang: ()=>{
+                    return "Bola ditendang.";
+                },
+                dilempar: ()=>{
+                    return "Bola dilempar.";
+                },
+                memantul: ()=>{
+                    return "Bola memantul.";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
