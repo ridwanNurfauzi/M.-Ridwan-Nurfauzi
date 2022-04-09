@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table,tr,th,td{
+        table,
+        tr,
+        th,
+        td {
             border: 1px solid #000;
         }
-        table{
+        
+        table {
             border-collapse: collapse;
             width: 100%;
         }
     </style>
 </head>
+
 <body>
     <table cellpadding="6">
-        <tr>
-            <th rowspan="2">Object</th>
-            <th colspan="2">Property</th>
-            <th colspan="2">method</th>
-        </tr>
-        <tr>
-            <th>Key</th>
-            <th>Value</th>
-            <th>Key</th>
-            <th>Value</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Object</th>
+                <th>Property</th>
+                <th>method</th>
+            </tr>
+        </thead>
         <tbody id="tb"></tbody>
     </table>
 
     <script>
         let objek = {
             bola: {
-                nama: "Bola basket",
-                diameter: "30cm",
-                warna:"Jingga",
+                properti: {
+                    nama: "Bola basket",
+                    diameter: "30cm",
+                    warna: "Jingga"
+                },
 
-                ditendang: ()=>{
-                    return "Bola ditendang.";
-                },
-                dilempar: ()=>{
-                    return "Bola dilempar.";
-                },
-                memantul: ()=>{
-                    return "Bola memantul.";
+                method: {
+                    ditendang: () => {
+                        return "Bola ditendang.";
+                    },
+                    dilempar: () => {
+                        return "Bola dilempar.";
+                    },
+                    memantul: () => {
+                        return "Bola memantul.";
+                    }
                 }
             }
         }
+
+        function tabel() {
+            const tb = document.getElementById('tb');
+            tb.innerHTML = '';
+
+            let tr = `<tr>`;
+
+            tr += `<td>${Object.keys(objek)[0]}</td><td>${(objek.bola.properti.nama)}<br>`;
+            tr += `${objek.bola.properti.diameter}<br>`;
+            tr += `${objek.bola.properti.warna}<br></td><td>`;
+            tr += `${objek.bola.method.ditendang()}<br>`;
+            tr += `${objek.bola.method.dilempar()}<br>`;
+            tr += `${objek.bola.method.memantul()}<br></td></tr>`;
+
+            tb.innerHTML += tr;
+        }
+
+        tabel();
     </script>
 </body>
+
 </html>
